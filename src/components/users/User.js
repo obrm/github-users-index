@@ -46,7 +46,6 @@ const User = () => {
               src={avatar_url}
               className="round-img"
               alt="avatar"
-              style={{ width: '150px' }}
             />
             <h2>{name}</h2>
             <p>מיקום: {location}</p>

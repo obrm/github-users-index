@@ -39,13 +39,7 @@ const Search = () => {
       </form>
       {users.length > 0 && (
         <button
-          className="btn btn-light btn-block"
-          style={{
-            border: '1px solid rgb(199 191 191)',
-            marginRight: '0px',
-            height: '27px',
-            lineHeight: '14px',
-          }}
+          className="btn btn-light btn-block btn-clear"          
           onClick={clearUsers}
         >
           ניקוי

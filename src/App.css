@@ -18,15 +18,26 @@
   --green: #115d23;
 }
 
+html {
+  /* The default font size of the browser is 16px, so if we want 1rem to be equal to 10px, we divide 10px by 16px = 62.5% */
+  font-size: 62.5%;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  box-sizing: border-box;
   font-family: 'Roboto', 'Arimo', sans-serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   background-color: var(--white);
   color: var(--dark-gray);
@@ -55,28 +66,28 @@ span {
 
 /* Utilities */
 .container {
-  max-width: 1100px;
+  max-width: 110rem;
   margin: auto;
   overflow: hidden;
-  padding: 0 2rem;
+  padding: 0 3.2rem;
 }
 
 /* Text Styles*/
 .x-large {
-  font-size: 4rem;
+  font-size: 6rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .large {
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .lead {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .text-center {
@@ -124,36 +135,37 @@ span {
 
 /* Cards */
 .card {
-  padding: 1rem;
+  padding: 1.6rem;
   border: var(--light-gray) 1px dotted;
-  border-radius: 5px;
-  margin: 0.7rem 0;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  min-width: 6rem;
 }
 
 /* List */
 .list {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
 }
 
 .list li {
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.8rem;
 }
 
 /* Padding */
 .p {
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 .p-1 {
-  padding: 1rem;
+  padding: 1.6rem;
 }
 .p-2 {
-  padding: 2rem;
+  padding: 3.2rem;
 }
 .p-3 {
   padding: 3rem;
 }
 .py {
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
 }
 .py-1 {
   padding: 1rem 0;
@@ -167,7 +179,7 @@ span {
 
 /* Margin */
 .m {
-  margin: 0.5rem;
+  margin: 0.8rem;
 }
 .m-1 {
   margin: 1rem;
@@ -179,7 +191,7 @@ span {
   margin: 3rem;
 }
 .my {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
 }
 .my-1 {
   margin: 1rem 0;
@@ -215,11 +227,11 @@ span {
   background: var(--light-color);
   border-radius: 5px;
   color: var(--dark-gray);
-  padding: 0.4rem 1.3rem;
-  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  font-size: 1.6rem;
   border: none;
   cursor: pointer;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   transition: opacity 0.2s ease-in;
   outline: none;
 }
@@ -235,10 +247,17 @@ span {
   width: 100%;
 }
 
+.btn-clear {
+  border: 1px solid var(--form-gray);
+  margin-right: 0;
+  height: 2.7rem;
+  line-height: 1.4rem;
+}
+
 .btn-sm {
-  font-size: 0.8rem;
-  padding: 0.3rem 1rem;
-  margin-right: 0.2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.6rem;
+  margin-right: 0.3rem;
 }
 
 .badge {
@@ -336,22 +355,23 @@ span {
 
 .round-img {
   border-radius: 50%;
+  width: 15rem;
 }
 
 /* Forms */
 input {
-  border-radius: 5px;
-  margin: 1.2rem 0;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
 }
 
 .form-text {
   display: block;
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
   color: var(--form-gray);
 }
 
 input[type='submit'] {
-  border: 1.5px solid var(--green);
+  border: 0.15rem solid var(--green);
   outline: none;
 }
 
@@ -363,9 +383,9 @@ select,
 textarea {
   display: block;
   width: 100%;
-  padding: 0.4rem;
-  font-size: 1.2rem;
-  border: 1px solid var(--light-gray);
+  padding: 0.6rem;
+  font-size: 2rem;
+  border: 0.1rem solid var(--light-gray);
 }
 
 input[type='submit'],
@@ -373,30 +393,19 @@ button {
   font: inherit;
 }
 
-table th,
-table td {
-  padding: 1rem;
-  text-align: left;
-}
-
-table th {
-  background: var(--light-color);
-}
-
 /* Navbar */
 .navbar {
-  padding: 0.7rem 2rem;
+  padding: 1rem 3rem;
   z-index: 1;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1100px;
-  max-width: 1100px;
+  width: 110rem;
 }
 
 .navbar .container .logo {
@@ -406,8 +415,8 @@ table th {
 
 .navbar .container .logo a {
   color: inherit;
-  padding: 0.45rem;
-  margin: 0 0.25rem;
+  padding: 0.7rem;
+  margin: 0 0.4rem;
 }
 
 .navbar .container .logo:hover {
@@ -420,8 +429,8 @@ table th {
 
 .navbar .link {
   color: var(--light-gray);
-  padding: 0.45rem;
-  margin: 0 0.25rem;
+  padding: 0.7rem;
+  margin: 0 0.4rem;
   transition: all 0.2s ease-in-out;
 }
 
@@ -434,11 +443,47 @@ table th {
 }
 
 .navbar .welcome span {
-  margin-right: 0.6rem;
+  margin-right: 1rem;
+}
+
+.spinner {
+  width: 20rem;
+  margin: auto;
+  display: block;
 }
 
 /* Mobile Styles */
+@media (max-width: 1200px) {
+
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .x-large {
+    font-size: 5rem;
+  }
+
+  .large {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1.6rem;
+  }
+
+  .container,
+  .navbar .container {
+    width: 100%;
+  }
+
+}
+
 @media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+
   .hide-sm {
     display: none;
   }
@@ -449,27 +494,8 @@ table th {
     grid-template-columns: 1fr;
   }
 
-  /* Text Styles */
-  .x-large {
-    font-size: 3rem;
-  }
-
-  .large {
-    font-size: 2rem;
-  }
-
-  .lead {
-    font-size: 1rem;
-  }
-
-  /* Navbar */
-  .navbar {
-    display: block;
-    text-align: center;
-  }
-
-  .navbar ul {
-    text-align: center;
-    justify-content: center;
+  .container,
+  .navbar .container {
+    width: 100%;
   }
 }
