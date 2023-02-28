@@ -442,10 +442,7 @@ button {
   color: var(--mid-gray);
 }
 
-.navbar .welcome span {
-  margin-right: 1rem;
-}
-
+/* Spinner */
 .spinner {
   width: 20rem;
   margin: auto;
@@ -453,6 +450,8 @@ button {
 }
 
 /* Mobile Styles */
+
+/* Small screens */
 @media (max-width: 1200px) {
 
   .grid-3,
@@ -479,6 +478,7 @@ button {
 
 }
 
+/* Tablet and phone */
 @media (max-width: 700px) {
   html {
     font-size: 50%;
