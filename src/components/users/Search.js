@@ -35,7 +35,7 @@ const Search = () => {
           value={text}
           onChange={onChange}
         />
-        <input type="submit" value="חיפוש" className="btn-success btn-block" />
+        <input type="submit" value="חיפוש" className="btn-success btn-block" disabled={!text && 'disabled'} />
       </form>
       {users.length > 0 && (
         <button
