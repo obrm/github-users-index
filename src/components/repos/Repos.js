@@ -1,4 +1,3 @@
-import React from 'react';
 import RepoItem from './RepoItem';
 
 const Repos = ({ repos }) => {
