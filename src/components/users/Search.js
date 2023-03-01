@@ -1,29 +1,11 @@
-import { useState } from 'react';
+import useSearch from './../../hooks/useSearch';
 
 import { useGithubGlobalContext } from './../../context/github/GithubState';
-import { useAlertGlobalContext } from './../../context/alert/AlertState';
 
 const Search = () => {
-  const { users, searchUsers, clearUsers } = useGithubGlobalContext();
-  const { setAlert } = useAlertGlobalContext();
+  const { users, clearUsers } = useGithubGlobalContext();
 
-  const [text, setText] = useState('');
-
-  const onChange = e => setText(e.target.value);
-
-  const onSubmit = async e => {
-    e.preventDefault();
-    if (text === '') {
-      setAlert('נא למלא את שדה החיפוש', 'warning');
-    } else {
-      const res = await searchUsers(text);
-      setText('');
-
-      if (res.length === 0) {
-        setAlert('לא נמצאו תוצאות לחיפוש! יש לנסות שוב.', 'danger', 2.5);
-      }
-    }
-  };
+  const { text, onSubmit, onChange } = useSearch();
 
   return (
     <div>
