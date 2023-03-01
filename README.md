@@ -7,11 +7,22 @@
 #### [Live demo.](https://obrm-github-index.netlify.app)
 
 
-#### Install
+### Environment Variables
 
-```
-npm i
-```
+Create a .env.local file with these variables:
+##### `REACT_APP_GITHUB_CLIENT_ID='your-github-client-id'`
+##### `REACT_APP_GITHUB_CLIENT_SECRET='your-github-client-secret'`
+
+In production call those variables: 
+
+##### `GITHUB_CLIENT_ID`
+###### `GITHUB_CLIENT_SECRET`
+
+## Install
+
+
+### `npm i`
+
 
 
 ### Available Scripts
