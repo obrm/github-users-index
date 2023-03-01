@@ -14,7 +14,6 @@ Create a .env.local file with these variables:
 ##### `REACT_APP_GITHUB_CLIENT_SECRET='your-github-client-secret'`
 
 In production call those variables: 
-
 ##### `GITHUB_CLIENT_ID`
 ###### `GITHUB_CLIENT_SECRET`
 
