@@ -226,7 +226,7 @@ span {
 .btn {
   display: inline-block;
   background: var(--light-color);
-  border-radius: 5px;
+  border-radius: .5rem;
   color: var(--dark-gray);
   padding: 0.6rem 2rem;
   font-size: 1.6rem;
@@ -276,6 +276,7 @@ span {
 .alert {
   padding: 0.7rem;
   margin: 1rem 0;
+  border-radius: 0.5rem;
   opacity: 0.9;
   background: var(--light-color);
   color: var(--dark-gray);

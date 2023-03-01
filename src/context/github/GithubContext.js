@@ -29,6 +29,8 @@ const GithubProvider = ({ children }) => {
       type: GITHUB_ACTIONS.SEARCH_USERS,
       payload: res.data.items,
     });
+
+    return res.data.items;
   };
 
   const getUser = async login => {
