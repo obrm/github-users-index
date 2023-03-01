@@ -1,6 +1,6 @@
 import { useGithubGlobalContext } from '../../context/github/GithubState';
 
-import { Spinner, UserItem } from '../';
+import { Spinner, UserItem } from '..';
 
 const Users = () => {
   const { loading, users } = useGithubGlobalContext();

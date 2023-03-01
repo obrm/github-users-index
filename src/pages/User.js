@@ -2,9 +2,9 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import { Spinner, Repos } from '../';
+import { Spinner, Repos, Badge } from '../components';
 
-import { useGithubGlobalContext } from './../../context/github/GithubState';
+import { useGithubGlobalContext } from '../context/github/GithubState';
 
 const User = () => {
   const { getUser, user, loading, repos, getUsersRepos } = useGithubGlobalContext();
@@ -31,6 +31,29 @@ const User = () => {
     company,
     hireable,
   } = user;
+
+  const badges = [
+    {
+      type: 'dark',
+      text: 'עוקבים',
+      number: followers
+    },
+    {
+      type: 'success',
+      text: 'עוקב אחרי',
+      number: following
+    },
+    {
+      type: 'info',
+      text: 'ריפוז ציבוריים',
+      number: public_repos
+    },
+    {
+      type: 'light',
+      text: 'גיסטים ציבוריים',
+      number: public_gists
+    },
+  ];
 
   if (loading) return <Spinner />;
 
@@ -106,12 +129,9 @@ const User = () => {
           </div>
         </div>
         <div className="card text-center">
-          <div className="badge badge-dark">עוקבים: {followers}</div>
-          <div className="badge badge-success">עוקב אחרי: {following}</div>
-          <div className="badge badge-info">ריפוז ציבוריים: {public_repos}</div>
-          <div className="badge badge-light">
-            גיסטים ציבוריים: {public_gists}
-          </div>
+          {badges.map((badge) => (
+            <Badge key={badge.type} {...badge} />
+          ))}
         </div>
         <Repos repos={repos} />
       </div>

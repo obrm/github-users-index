@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { SharedLayout, User } from './components';
-import { Home, About, NotFound } from './pages';
+import { SharedLayout } from './components';
+import { Home, About, NotFound, User } from './pages';
 
 import './App.css';
 
