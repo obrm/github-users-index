@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './components';
 import { Home, About, NotFound, User } from './pages';
 
-import './App.css';
-
 const App = () => {
   return (
     <BrowserRouter>
@@ -13,11 +11,8 @@ const App = () => {
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-
             <Route path="user/:id" element={<User />} />
-
             <Route path="*" element={<NotFound />} />
-
           </Route>
         </Routes>
       </div>

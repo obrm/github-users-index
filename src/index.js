@@ -6,6 +6,8 @@ import { GithubProvider } from './context/github/GithubState';
 
 import App from './App';
 
+import './index.css'
+
 ReactDOM.render(
   <React.StrictMode>
     <GithubProvider>

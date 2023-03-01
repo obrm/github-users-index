@@ -66,6 +66,7 @@ span {
 
 /* Utilities */
 .container {
+  width: 110rem;
   max-width: 110rem;
   margin: auto;
   overflow: hidden;
@@ -411,7 +412,6 @@ input[type='submit']:disabled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 110rem;
 }
 
 .navbar .container .logo {

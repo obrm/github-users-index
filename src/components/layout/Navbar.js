@@ -1,6 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
 
-const Navbar = ({ icon, title }) => {
+const Navbar = () => {
   return (
     <nav className="navbar bg-dark">
       <div className="container">
