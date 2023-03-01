@@ -6,16 +6,16 @@ import { GithubProvider } from './context/github/GithubState';
 
 import App from './App';
 
-import './index.css'
+import './index.css';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
   <React.StrictMode>
     <GithubProvider>
       <AlertProvider>
         <App />
       </AlertProvider>
     </GithubProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
-
