@@ -16,7 +16,7 @@ const useSearch = () => {
       setAlert('נא למלא את שדה החיפוש', 'warning');
     } else {
       const res = await searchUsers(text);
-      console.log(res)
+
       setText('');
 
       if (res.length === 0) {
