@@ -1,11 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { SET_ALERT, REMOVE_ALERT } from '../types';
+import { ALERT_ACTIONS } from '../actions';
 
 export default (state, action) => {
-  switch (action.type) {
-    case SET_ALERT:
-      return action.payload;
-    case REMOVE_ALERT:
+  const { type, payload } = action;
+  switch (type) {
+    case ALERT_ACTIONS.SET_ALERT:
+      return payload;
+    case ALERT_ACTIONS.REMOVE_ALERT:
       return null;
     default:
       return state;

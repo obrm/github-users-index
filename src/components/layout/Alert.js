@@ -1,5 +1,5 @@
 
-import { useAlertGlobalContext } from '../../context/alert/AlertState';
+import { useAlertGlobalContext } from '../../context/alert/AlertContext';
 
 const Alert = () => {
   const { alert } = useAlertGlobalContext();

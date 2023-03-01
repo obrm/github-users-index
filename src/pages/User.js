@@ -4,16 +4,16 @@ import { Link, useParams } from 'react-router-dom';
 
 import { Spinner, Repos, Badge } from '../components';
 
-import { useGithubGlobalContext } from '../context/github/GithubState';
+import { useGithubGlobalContext } from '../context/github/GithubContext';
 
 const User = () => {
-  const { getUser, user, loading, repos, getUsersRepos } = useGithubGlobalContext();
+  const { getUser, user, loading, repos, getUserRepos } = useGithubGlobalContext();
 
   const { id } = useParams();
 
   useEffect(() => {
     getUser(id);
-    getUsersRepos(id);
+    getUserRepos(id);
   }, []);
 
   const {

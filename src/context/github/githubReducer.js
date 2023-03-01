@@ -1,38 +1,34 @@
 /* eslint-disable import/no-anonymous-default-export */
-import {
-  SEARCH_USERS,
-  SET_LOADING,
-  CLEAR_USERS,
-  GET_USER,
-  GET_REPOS,
-} from '../types';
+import { GITHUB_ACTIONS } from '../actions';
 
 export default (state, action) => {
-  switch (action.type) {
-    case SEARCH_USERS:
+  const { type, payload } = action;
+
+  switch (type) {
+    case GITHUB_ACTIONS.SEARCH_USERS:
       return {
         ...state,
-        users: action.payload,
-        loading: false,
+        users: payload,
+        loading: false
       };
-    case GET_USER:
+    case GITHUB_ACTIONS.GET_USER:
       return {
         ...state,
-        user: action.payload,
-        loading: false,
+        user: payload,
+        loading: false
       };
-    case SET_LOADING:
-      return {
-        ...state,
-        loading: true,
-      };
-    case GET_REPOS:
+    case GITHUB_ACTIONS.GET_REPOS:
       return {
         ...state,
         repos: action.payload,
         loading: false,
       };
-    case CLEAR_USERS:
+    case GITHUB_ACTIONS.SET_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
+    case GITHUB_ACTIONS.CLEAR_USERS:
       return {
         ...state,
         users: [],

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { AlertProvider } from './context/alert/AlertState';
-import { GithubProvider } from './context/github/GithubState';
+import { AlertProvider } from './context/alert/AlertContext';
+import { GithubProvider } from './context/github/GithubContext';
 
 import App from './App';
 

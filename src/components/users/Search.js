@@ -1,6 +1,6 @@
 import useSearch from './../../hooks/useSearch';
 
-import { useGithubGlobalContext } from './../../context/github/GithubState';
+import { useGithubGlobalContext } from '../../context/github/GithubContext';
 
 const Search = () => {
   const { users, clearUsers } = useGithubGlobalContext();
