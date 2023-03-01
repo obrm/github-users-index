@@ -1,6 +1,6 @@
 const RepoItem = ({ repo }) => {
   const updateDate = new Date(repo.updated_at).toLocaleDateString();
-  console.log(repo);
+
   return (
     <div className="card all-center">
       <h3>
